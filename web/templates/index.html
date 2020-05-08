@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+<div>
+    <div class="latest-publication">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="ui-header">{{ latest_post.title }}</h1>
+                    <p>{{ latest_post.text }}</p>
+<!--                    <a href="#" class="btn btn-default ui-button">Читать</a>-->
+                    <a href="#" class="btn">Читать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2 class="ui-header">Другие статьи</h2>
+        <div class="row">
+            {% for post in previous_posts %}
+            <div class="col xl4 l4 m6 s12 center-align">
+                <div class="card hoverable small">
+                    <div class="date">
+                        <p>{{ post.published_date }}</p>
+                    </div>
+                    <div class="card-image">
+                        {% if post.cover %}
+                        <img src="{{MEDIA_URL}}{{ post.cover.url}}">
+                        <span class="card-title">{{ post.title }}</span>
+                        {% endif %}
+                        {% if not post.cover %}
+                        <h3 class="ui-header">{{ post.title }}</h3>
+                        {% endif %}
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.text }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a class="more-info" href="#">Читать</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

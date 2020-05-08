@@ -1,0 +1,72 @@
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+main{
+	flex: 1 0 auto;
+}
+nav{
+    background: #fff;
+	color: #315af2;
+}
+a.brand-logo{
+	margin-left: 50px;
+	color: #315af2;
+}
+a.ui-link{
+	color: #000;
+}
+a.more-info{
+	color: #315af2;
+}
+.latest-publication{
+	border-bottom: 2px solid lightgray;
+}
+.card{
+	padding-top: 5px;
+}
+.date{
+	text-align: left;
+	margin-left: 20px;
+}
+.card .card-image .card-title{
+	color: #000;
+}
+footer.page-footer{
+	background: #fff;
+	color: #000;
+	border-top: 2px solid lightgray;
+}
+.footer-copyright{
+	border-top: 2px solid lightgray;
+}
+.ui-header{
+	color: #315af2;
+}
+.btn{
+	width: 200px;
+	height: 60px;
+	background-color: #315af2;
+	color: #fff
+}
+.btn:hover, .btn:active, .btn:focus{
+	background-color: #6583f5;
+	color: #fff
+}
+.ui-button{
+	background-color: #315af2;
+	color: #fff
+}
+.ui-button:hover, .ui-button:active, .ui-button:focus{
+	background-color: #6583f5;
+	color: #fff
+}
+.ui-button-send{
+	background-color: #e9399c;
+	color: #fff
+}
+.ui-button-send:hover, .ui-button-send:active, .ui-button-send:focus{
+	background-color: #6583f5;
+	color: #fff
+}

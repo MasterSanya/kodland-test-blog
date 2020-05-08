@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">Kodland</a>
+            <div class="container">
+                <div class="row">
+                    <a class="ui-link" href="/">Блог</a>
+                    <a class="ui-link" href="/post/new/">Добавить статью</a>
+                    <a class="ui-link" href="/admin/web/post/">Админка</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<main>
+    {% block content %}{% endblock %}
+</main>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="ui-header">Footer content</h5>
+                <p class="black-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci corporis doloremque
+                    expedita explicabo, facilis fuga illo ipsum nesciunt omnis quas quod sed tempora tempore. Dolore.
+                </p>
+            </div>
+            <div class="col l4 offset-12 s12">
+                <h5 class="ui-header">Links</h5>
+                <ul>
+                    <li><a href="#" class="ui-link">Link1</a></li>
+                    <li><a href="#" class="ui-link">Link2</a></li>
+                    <li><a href="#" class="ui-link">Link3</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <span class="black-text">&copy; Mr_Sanya</span>
+            <a href="#" class="ui-link right">More links</a>
+        </div>
+    </div>
+</footer>
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.0.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
