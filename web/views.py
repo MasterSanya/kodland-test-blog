@@ -16,11 +16,14 @@ def index(request):
         latest_post = model_to_dict(posts[0])
         previous_posts = posts[1:posts_count]
 
-    return render(request, 'index.html', {
-        'latest_post': latest_post,
-        'previous_posts': previous_posts,
-        'posts': posts,
-    })
+        return render(request, 'index.html', {
+            'latest_post': latest_post,
+            'previous_posts': previous_posts,
+            'posts': posts,
+        })
+
+    else:
+        return render(request, 'index.html', {})
 
 
 def new_post(request):
