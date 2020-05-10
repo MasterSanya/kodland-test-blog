@@ -62,6 +62,19 @@ def index(request):
 
 def new_post(request):
     if request.method == "POST":
+        title = request.POST['title']
+        text = request.POST['text']
+
+        if len(title) == 0:
+            return render(request, 'post_edit.html', {
+                'error': 'Не указано название публикации!'
+            })
+
+        if len(text) == 0:
+            return render(request, 'post_edit.html', {
+                'error': 'Не указан текст публикации!'
+            })
+
         form = PostForm(request.POST, request.FILES)
         if form.is_valid():
             post = form.save(commit=False)
@@ -69,7 +82,6 @@ def new_post(request):
             post.published_date = timezone.now()
             post.save()
             return redirect('index')
-            # return redirect('post_detail, pk=post.pk')
     else:
         form = PostForm()
     return render(request, 'post_edit.html', {'form': form})

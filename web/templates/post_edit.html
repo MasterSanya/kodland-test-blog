@@ -6,33 +6,42 @@
     <h1 class="ui-header">Добавить статью</h1>
     <p style="color: red;">{{ error }}</p>
     <div class="row">
-        <form method="post" enctype="multipart/form-data" class="post-form col s12">
-            {% csrf_token %}
-            {{ form }}
-             <button type="submit" class="save btn btn-default ui-button-send">Опубликовать</button>
-        </form>
+        <!--        <form method="post" enctype="multipart/form-data" class="post-form col s12">-->
+        <!--            {% csrf_token %}-->
+        <!--            {{ form }}-->
+        <!--             <button type="submit" class="save btn btn-default ui-button-send">Опубликовать</button>-->
+        <!--        </form>-->
 
-<!--        <form method="post" action="/post/new/" class="post-form col s12">-->
-<!--            {% csrf_token %}-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s9">-->
-<!--                    <input type="text" id="post_title" name="title" class="validate"-->
-<!--                           placeholder="Введите название статьи">-->
-<!--                </div>-->
-<!--                <div class="col s3">-->
-<!--                    <button type="submit" class="save btn btn-default ui-button-send">Опубликовать</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="input-field col s9">-->
-<!--                    <textarea id="post_text" name="text" class="validate" style="resize: vertical;"></textarea>-->
-<!--                </div>-->
-<!--                <div class="col s3">-->
-<!--                    <h4 class="ui-header">Загрузить изображение</h4>-->
-<!--&lt;!&ndash;                    <button class="btn btn-default ui-button">Выбрать</button>&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </form>-->
+        <form method="post" action="/post/new/" enctype="multipart/form-data" class="post-form col s12">
+            {% csrf_token %}
+            <div class="row">
+                <div class="input-field col s9">
+                    <input type="text" id="post_title" name="title" class="validate"
+                           placeholder="Введите название статьи">
+                </div>
+                <div class="col s3">
+                    <button type="submit" class="save btn btn-default ui-button-send">Опубликовать</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s9">
+                    <textarea id="post_text" name="text" class="validate" style="resize: vertical;"></textarea>
+                </div>
+                <div class="col s3">
+                    <h4 class="ui-header">Загрузить изображение</h4>
+                    <!--                    <button class="btn btn-default ui-button">Выбрать</button>-->
+                    <div class="file-field input-field">
+                        <div class="btn btn-default">
+                            <span>Выбрать</span>
+                            <input type="file" id="post_cover" name="cover" class="validate">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input type="text" class="file-path validate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 {% endblock %}

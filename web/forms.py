@@ -8,7 +8,7 @@ class PostForm(forms.ModelForm):
         model = Post
 
         fields = {
-            'title': forms.TextInput(attrs={'placeholder': 'Введите название статьи'}),
+            'title': forms.TextInput(attrs={"placeholder": "Введите название статьи"}),
             'text': forms.Textarea(),
             'cover': forms.ImageField(),
         }
