@@ -26,49 +26,50 @@ def index(request):
         return render(request, 'index.html', {})
 
 
+# def new_post(request):
+#     if request.method == "POST":
+#         title = request.POST['title']
+#         text = request.POST['text']
+#
+#         if len(title) == 0:
+#             return render(request, 'post_edit.html', {
+#                 'error': 'Не указано название публикации!'
+#             })
+#
+#         if len(text) == 0:
+#             return render(request, 'post_edit.html', {
+#                 'error': 'Не указан текст публикации!'
+#             })
+#
+#         if 'cover' in request.FILES:
+#             cover = request.FILES['cover']
+#             Post(
+#                 author=request.user,
+#                 title=title,
+#                 cover=cover,
+#                 text=text.replace('\n', '<br />'),
+#             ).publish()
+#         else:
+#             Post(
+#                 author=request.user,
+#                 title=title,
+#                 text=text.replace('\n', '<br />'),
+#             ).publish()
+#
+#         return redirect('/')
+#     else:
+#         return render(request, 'post_edit.html', {})
+
 def new_post(request):
     if request.method == "POST":
-        title = request.POST['title']
-        text = request.POST['text']
-
-        if len(title) == 0:
-            return render(request, 'post_edit.html', {
-                'error': 'Не указано название публикации!'
-            })
-
-        if len(text) == 0:
-            return render(request, 'post_edit.html', {
-                'error': 'Не указан текст публикации!'
-            })
-
-        if 'cover' in request.FILES:
-            cover = request.FILES['cover']
-            Post(
-                author=request.user,
-                title=title,
-                cover=cover,
-                text=text.replace('\n', '<br />'),
-            ).publish()
-        else:
-            Post(
-                author=request.user,
-                title=title,
-                text=text.replace('\n', '<br />'),
-            ).publish()
-
-        return redirect('/')
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('index')
+            # return redirect('post_detail, pk=post.pk')
     else:
-        return render(request, 'post_edit.html', {})
-
-    # if request.method == "POST":
-    #     form = PostForm(request.POST)
-    #     if form.is_valid():
-    #         post = form.save(commit=False)
-    #         post.author = request.user
-    #         post.published_date = timezone.now()
-    #         post.save()
-    #         return redirect('index')
-    #         # return redirect('post_detail, pk=post.pk')
-    # else:
-    #     form = PostForm()
-    # return render(request, 'post_edit.html', {'form': form})
+        form = PostForm()
+    return render(request, 'post_edit.html', {'form': form})
