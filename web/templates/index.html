@@ -9,7 +9,7 @@
                 <div class="col s12">
                     {% if posts %}
                     <h1 class="ui-header">{{ latest_post.title }}</h1>
-                    <p>{{ latest_post.text }}</p>
+                    <p>{{ latest_post.text|safe }}</p>
                     <!--                    <a href="#" class="btn btn-default ui-button">Читать</a>-->
                     <a href="#" class="btn">Читать</a>
                     {% else %}
@@ -38,7 +38,7 @@
                         {% endif %}
                     </div>
                     <div class="card-content">
-                        <p>{{ post.text }}</p>
+                        <p>{{ post.text|safe }}</p>
                     </div>
                     <div class="card-action">
                         <a class="more-info" href="#">Читать</a>
