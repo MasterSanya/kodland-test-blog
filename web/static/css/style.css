@@ -1,72 +1,397 @@
+/* Шрифты */
+@font-face {
+	font-family: 'Museo Cyrl';
+	/* src: url("../fonts/museocyrl/Museocyrl500.woff"); */
+	src: local('Museo Cyrl 500'), local('MuseoCyrl-500'),
+		url('../fonts/museocyrl/Museocyrl500.woff2') format('woff2'),
+		url('../fonts/museocyrl/Museocyrl500.woff') format('woff'),
+		url('../fonts/museocyrl/Museocyrl500.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-ExtraLight.eot');
+    src: local('Circe Rounded Extra Light'), local('CirceRounded-ExtraLight'),
+        url('../fonts/circlerounded/CirceRounded-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-ExtraLight.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-ExtraLight.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-Regular2.eot');
+    src: local('Circe Rounded  Regular 2'), local('CirceRounded-Regular2'),
+        url('../fonts/circlerounded/CirceRounded-Regular2.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-Regular2.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-Regular2.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-Regular2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded Alt';
+    src: url('../fonts/circlerounded/CirceRoundedAlt-Regular2.eot');
+    src: local('Circe Rounded Alt  Regular 2'), local('CirceRoundedAlt-Regular2'),
+        url('../fonts/circlerounded/CirceRoundedAlt-Regular2.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRoundedAlt-Regular2.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRoundedAlt-Regular2.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRoundedAlt-Regular2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-Regular3.eot');
+    src: local('Circe Rounded  Regular 3'), local('CirceRounded-Regular3'),
+        url('../fonts/circlerounded/CirceRounded-Regular3.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-Regular3.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-Regular3.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-Regular3.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-Regular5.eot');
+    src: local('Circe Rounded  Regular 5'), local('CirceRounded-Regular5'),
+        url('../fonts/circlerounded/CirceRounded-Regular5.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-Regular5.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-Regular5.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-Regular5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-Regular.eot');
+    src: local('Circe Rounded'), local('CirceRounded-Regular'),
+        url('../fonts/circlerounded/CirceRounded-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-Regular.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-Regular.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded Alt';
+    src: url('../fonts/circlerounded/CirceRounded-AltBold.eot');
+    src: local('Circe Rounded Alt Bold'), local('CirceRounded-AltBold'),
+        url('../fonts/circlerounded/CirceRounded-AltBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-AltBold.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-AltBold.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-AltBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Circe Rounded';
+    src: url('../fonts/circlerounded/CirceRounded-Regular4.eot');
+    src: local('Circe Rounded  Regular 4'), local('CirceRounded-Regular4'),
+        url('../fonts/circlerounded/CirceRounded-Regular4.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/circlerounded/CirceRounded-Regular4.woff2') format('woff2'),
+        url('../fonts/circlerounded/CirceRounded-Regular4.woff') format('woff'),
+        url('../fonts/circlerounded/CirceRounded-Regular4.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Стили */
 body{
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
+
 main{
 	flex: 1 0 auto;
 }
+
+
+/* header */
+.navbar-fixed {
+    height: 100px;
+    line-height: 100px;
+}
+
 nav{
+	height: 100px;
+    line-height: 100px;
     background: #fff;
 	color: #315af2;
 }
+
+.nav-wrapper,
 a.brand-logo{
-	margin-left: 50px;
+	display: flex;
+	align-items: center;
+}
+
+a.brand-logo{
 	color: #315af2;
 }
-a.ui-link{
-	color: #000;
+
+.breadcrumbs,
+.breadcrumbs a{
+	font-family: Circe Rounded;
+	font-size: 24px;
+	line-height: 31px;
+	color: #010101;
 }
-a.more-info{
+
+.breadcrumbs{
+	padding-left: 125px;
+}
+
+.account-menu{
+	box-sizing: border-box;
+}
+
+.account-menu a{
+	margin-right: 16px;
+	/* display: flex; */
+    /* align-items: center; */
+}
+
+.account-menu a:last-child{
+	margin-right: 51px;
+}
+
+.account-menu a img{
+	max-height: 70px;
+}
+
+.account-menu a img.pupil{
+	/* margin-top: 50px; */
+	border: 2px solid black;
+	border-radius: 35px;
+}
+
+/* box-sizing: border-box; */
+
+
+/* Заголовки */
+.ui-header{
+	font-family: 'Museo Cyrl', serif;
 	color: #315af2;
 }
-.latest-publication{
+
+h1.ui-header, h2.ui-header{
+	font-weight: 900;
+	text-align: left;
+	vertical-align: center;
+	letter-spacing: -0.42px;
+}
+
+h1.ui-header{
+	font-size: 45px;
+}
+
+.latest-post h1.ui-header{
+	margin-top: 0;
+}
+
+h2.ui-header{
+	font-size: 36px;
+}
+
+.load-image .ui-header{
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 24px;
+}
+
+
+/* Кнопки */
+.btn{
+	background-color: #315af2;
+	font-family: 'Museo Cyrl', serif;
+	font-weight: bold;
+	text-align: center;
+	text-transform: capitalize;
+	vertical-align: middle;
+	color: #fff
+}
+
+.btn-read{
+	width: 168px;
+	height: 68px;
+	font-size: 36px;
+	line-height: 68px;
+}
+
+.btn-choose-file{
+	width: 155px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+}
+
+.btn-send{
+	width: 159px;
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+	background-color: #e9399c;
+}
+
+.btn:hover, .btn:active, .btn:focus,
+.btn-send:hover, .btn-send:active, .btn-send:focus{
+	background-color: #6583f5;
+}
+
+
+/* Самая свежая статья */
+.latest-post{
 	border-bottom: 2px solid lightgray;
 }
+
+.latest-post .post-info .new{
+	font-family: Circe Rounded;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: -0.416667px;
+	color: #E9399C;
+}
+
+.latest-post .container .row{
+	display: flex;
+    align-items: center;
+}
+
+.latest-post p{
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 16px;
+	text-align: left;
+	vertical-align: center;
+	letter-spacing: -0.42px;
+}
+
+
+/* Карточки статей */
 .card{
+	box-sizing: border-box;
 	padding-top: 5px;
 }
+
+.card-title.ui-header{
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 24px;
+	font-weight: 500;
+}
+
+.card-content p{
+	font-family: 'Circe Rounded', sans-serif;
+}
+
 .date{
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 12px;
 	text-align: left;
 	margin-left: 20px;
+	letter-spacing: -0.42px;
+	color: #979797;
 }
+
+.card-image{
+	height: 37%;
+	display: flex;
+    align-items: center;
+}
+
 .card .card-image .card-title{
 	color: #000;
 }
+
+.card .card-action {
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 20px;
+	border: none;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating),
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color:  #CDCDCD;
+  text-transform: none;
+}
+
+
+/* Поля формы */
+.form-row-1{
+	display: flex;
+	align-items: center;
+}
+
+button.save{
+	line-height: 100%;
+}
+
+form-row-2{
+	vertical-align: top;
+	/* display: flex; */
+	/* align-items: flex-start; */
+}
+
+.load-image{
+	margin-top: 15px;
+	border: 2px solid #CDCDCD;
+	box-sizing: border-box;
+	border-radius: 3px;
+	text-align: center;
+}
+
+input[type=text]:not(.browser-default),
+input.valid[type=text]:not(.browser-default),
+input[type=text]:not(.browser-default):focus:not([readonly])
+{
+	box-sizing: border-box;
+	
+	height: 48px;
+	border: 2px solid #CDCDCD;
+	border-radius: 3px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	
+	padding-left: 17px;
+	font-family: 'Circe Rounded', sans-serif;
+	font-size: 24px;
+	line-height: 52px;
+	letter-spacing: -0.416667px;
+	color: #315AF2;
+}
+
+
+
+
+
+
+/* Ссылки в шапке (убрать) */
+a.ui-link{
+	color: #000;
+}
+/* "Читать статью" (убрать) */
+a.more-info{
+	color: #315af2;
+}
+
+
+
+/* footer */
 footer.page-footer{
 	background: #fff;
 	color: #000;
 	border-top: 2px solid lightgray;
 }
+
 .footer-copyright{
 	border-top: 2px solid lightgray;
-}
-.ui-header{
-	color: #315af2;
-}
-.btn{
-	width: 200px;
-	height: 60px;
-	background-color: #315af2;
-	color: #fff
-}
-.btn:hover, .btn:active, .btn:focus{
-	background-color: #6583f5;
-	color: #fff
-}
-.ui-button{
-	background-color: #315af2;
-	color: #fff
-}
-.ui-button:hover, .ui-button:active, .ui-button:focus{
-	background-color: #6583f5;
-	color: #fff
-}
-.ui-button-send{
-	background-color: #e9399c;
-	color: #fff
-}
-.ui-button-send:hover, .ui-button-send:active, .ui-button-send:focus{
-	background-color: #6583f5;
-	color: #fff
 }
