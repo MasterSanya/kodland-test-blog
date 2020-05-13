@@ -155,12 +155,15 @@ a.brand-logo{
 
 .account-menu{
 	box-sizing: border-box;
+	display: flex;
+    align-items: center;
 }
 
 .account-menu a{
+	display: flex;
+    align-items: center;
 	margin-right: 16px;
-	/* display: flex; */
-    /* align-items: center; */
+	/* height: 100%; */
 }
 
 .account-menu a:last-child{
@@ -331,32 +334,6 @@ h2.ui-header{
 	align-items: center;
 }
 
-button.save{
-	line-height: 100%;
-}
-
-form-row-2{
-	vertical-align: top;
-	/* display: flex; */
-	/* align-items: flex-start; */
-}
-
-.load-image{
-	margin-top: 15px;
-	border: 2px solid #CDCDCD;
-	box-sizing: border-box;
-	border-radius: 3px;
-	text-align: center;
-}
-
-.img-thumbnail {
-	width: 286px;
-    height: 260px;
-	border: 2px solid #E5E5E5;
-	box-sizing: border-box;
-    margin: 10px 5px 0 0;
-  }
-
 input[type=text]:not(.browser-default),
 input.valid[type=text]:not(.browser-default),
 input[type=text]:not(.browser-default):focus:not([readonly])
@@ -376,6 +353,45 @@ input[type=text]:not(.browser-default):focus:not([readonly])
 	letter-spacing: -0.416667px;
 	color: #315AF2;
 }
+
+button.save{
+	line-height: 100%;
+}
+
+form-row-2{
+	vertical-align: top;
+	/* display: flex; */
+	/* align-items: flex-start; */
+}
+
+.load-image{
+	margin-top: 15px;
+	border: 2px solid #CDCDCD;
+	box-sizing: border-box;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.btn-choose-file input[type=file],
+.btn-choose-file .file-path-wrapper
+,
+.btn-choose-file .file-path-wrapper input[type=text]:not(.browser-default).file-path
+{
+	clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);
+	/* width: 0.1px; */
+    /* height: 0.1px; */
+	/* display: none; */
+}
+
+.img-thumbnail {
+	max-height: 100%;
+	max-width: 100%;
+	border: 2px solid #E5E5E5;
+	box-sizing: border-box;
+    margin: 10px 0 0 0;
+  }
+
+
 
 
 
