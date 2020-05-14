@@ -269,6 +269,11 @@ h2.ui-header{
 	line-height: 20px;
 	letter-spacing: -0.416667px;
 	color: #E9399C;
+	margin-right: 17px;
+}
+
+.latest-post .post-info a{
+	margin-right: 8px;
 }
 
 .latest-post .container .row{
