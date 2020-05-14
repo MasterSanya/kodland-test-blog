@@ -421,6 +421,18 @@ footer.page-footer{
 	border-top: 2px solid lightgray;
 }
 
+footer.page-footer .ui-header{
+	font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    /* text-transform: uppercase; */
+}
+
+footer.page-footer .ui-link,
+footer.page-footer .footer-copyright{
+	font-family: 'Circe Rounded';
+}
+
 .footer-copyright{
 	border-top: 2px solid lightgray;
 }
