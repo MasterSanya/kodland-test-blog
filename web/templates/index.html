@@ -45,7 +45,16 @@
         </div>
     </div>
     <div class="container">
-        <h2 class="ui-header">Другие статьи</h2>
+        <div class="row align-items-center">
+            <div class="col s11">
+                <h2 class="ui-header">Другие статьи</h2>
+            </div>
+            <div class="col s1">
+                <a href="#">
+                    <img class="responsive-img" src="{% static 'img/filter.png' %}">
+                </a>
+            </div>
+        </div>
         <div class="row">
             {% for post in previous_posts %}
             <div class="col xl4 l4 m6 s12 center-align">
